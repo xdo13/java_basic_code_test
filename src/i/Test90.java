@@ -2,7 +2,7 @@ package i;
 
 import java.util.Scanner;
 
-Class Test90{
+class Test90{
 
 static int min(int a, int b, int c) {
     int min = a;
