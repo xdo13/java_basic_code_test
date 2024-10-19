@@ -1,4 +1,4 @@
-package p;
+package p.exam01;
 
 import n.exam02.Day;
 
