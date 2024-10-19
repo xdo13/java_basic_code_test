@@ -1,4 +1,4 @@
-package p.exam02;
+package p;
 
 import java.util.GregorianCalendar;
 import java.util.Random;
