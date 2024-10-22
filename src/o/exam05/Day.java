@@ -120,7 +120,7 @@ public class Day {
             date++;
         else{
             if (++month > 12){
-                year+;
+                year++;
                 month = 1;
             }
             date = 1;
@@ -148,13 +148,44 @@ public class Day {
         return  temp;
     }
 
-    public void succeedDays(int n ){
+    public void succeedDays(int n ) {
         if (n < 0)
             precedeDays(-n);
-        else if (n > 0){
+    else if (n > 0){
             date +=n;
-            while
+            while(date > dayOfMonth(year, month)){
+                date-= dayOfMonth(year, month);
+                month++;
+                if (month > 12) {
+                    month = 1;
+                    year++;
+                }
+            }
         }
+    }
+    public Day after(int n){
+        Day temp = new Day(this);
+        temp.succeedDays(n);
+        return temp;
+    }
+    public  void  precedeDays(int n){
+        if (n < 0)
+            succeedDays(-n);
+        else if (n > 0){
+            date -=n;
+            while (date < 1){
+                if (--month < 1){
+                    year--;
+                    month = 12;
+                }
+                date += dayOfMonth(year,month);
+            }
+        }
+    }
+    public Day before(int n){
+        Day temp = new Day(this);
+        temp.precedeDays(n);
+        return temp;
     }
 
 }

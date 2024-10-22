@@ -3,10 +3,10 @@ package n.exam03;
 import n.exam02.Day;
 
 public class Account {
-    private String name;
-    private String no;
-    private long balance;
-    private Day openDay;
+    protected String name;
+    protected String no;
+    protected long balance;
+    protected Day openDay;
 
     Account(String n, String num, long z,Day d){
         name = n;
@@ -27,7 +27,7 @@ public class Account {
     public Day getOpenDay(){
         return new Day(openDay);
     }
-    void deposit(long k){
+    protected void deposit(long k){
         balance +=k;
     }
     void withdraw(long k){
