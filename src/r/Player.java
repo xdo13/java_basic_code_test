@@ -1,4 +1,4 @@
-package r.exam01;
+package r;
 
 public abstract class Player {
     int hand;

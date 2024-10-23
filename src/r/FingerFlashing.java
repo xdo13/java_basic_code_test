@@ -1,4 +1,4 @@
-package r.exam01; //가위바위보 패키지
+package r; //가위바위보 패키지
 
 import java.util.Scanner;
 

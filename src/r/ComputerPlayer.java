@@ -1,4 +1,4 @@
-package r.exam01;
+package r;
 
 import java.util.Random;
 
